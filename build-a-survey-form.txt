@@ -1,0 +1,155 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title="Survey Form">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description" >Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <fieldset>
+      <label for="name-label" class="name" id="name-label">Name 
+        <input id="name" type="text" name="name" required placeholder="Name">
+        </label>
+      <label for="email-label" id="email-label">Email <input id="email" type="email" name="email" required placeholder="Email"></label>
+      <label for="number-label" id="number-label">ID <input id="number" type="number" name="number" pattern="[0-9]" min=0 max=10 placeholder="Number"></label>
+
+    <label>Which option best describes your current role?</label>
+    <select id="dropdown" class="dropdown">
+      <option id="select-role" disabled selected value>Select current role</option>
+      <option id="student" value="1">Student</option>
+      <option id="full-time-job" value="2">Full Time Job</option>
+      <option id="other" value="3">Other</option>
+    </select>
+    </label>
+
+      <label for="cool-site-label">How cool is this site?
+    <label for="radio-option-1" class="radio-option-label"><input type="radio" name="cool-input" class="cool" value="0"> So cool</label>
+    <label for="radio-option-2" class="radio-option-label"><input type="radio" name="cool-input" class="cool" value="1"> Very cool</label>
+    </fieldset>
+    <fieldset>
+      <label>What would you like to see improved?</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="0" class="checkbox-class"> Front end</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="1" class="checkbox-class"> Back end</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="2" class="checkbox-class"> User interface</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="3" class="checkbox-class"> Performance</label>
+  </fieldset>
+  <fieldset>
+    <label for="comments-label">Any comments or suggestions <textarea id="comments" name="comments-box" rows="3" cols="30" placeholder="Enter your comments here..."></textarea></label>
+  </fieldset>
+  <fieldset>
+    <input type="submit" value="Submit" id="submit"/>
+  </fieldset>
+    </form>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1, p{
+  color: white;
+  text-align: center;
+}
+
+p{
+  font-style: italic;
+}
+
+form {
+  width: 60vw;
+  max-width: 700px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+}
+
+input{
+  margin: 5px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  margin-bottom: 20px
+}
+
+fieldset{
+  color: none;
+  background-color: none;
+  border: none;
+}
+
+.name-label {
+  display: block;
+  margin-top: 10px;
+}
+
+.dropdown
+{
+  width: 100%;
+  margin: 5px auto 20px auto;
+  height: 2em;
+}
+
+.radio-option-label{
+  display: block;
+  margin: 0 auto;
+}
+
+.cool:first-of-type{
+  margin-top: 5px;
+}
+
+.cool {
+  width: unset;
+  margin: 0 5px 10px 0;
+  vertical-align: middle;
+}
+
+.checkbox-class:first-of-type{
+  margin-top: 5px;
+}
+
+.checkbox-class {
+  width: unset;
+  margin: 0 5px 10px 0;
+  vertical-align: middle;
+}
+
+.checkbox-label{
+  display: block;
+  margin: 0;
+}
+
+textarea{
+  margin-top: 5px;
+}
+
+** end of undefined **
+
