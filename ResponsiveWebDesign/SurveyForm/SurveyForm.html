@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title="Survey Form">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description" >Thank you for taking the time to help us improve the platform</p>
+    <form id="survey-form">
+      <fieldset>
+      <label for="name-label" class="name" id="name-label">Name 
+        <input id="name" type="text" name="name" required placeholder="Name">
+        </label>
+      <label for="email-label" id="email-label">Email <input id="email" type="email" name="email" required placeholder="Email"></label>
+      <label for="number-label" id="number-label">ID <input id="number" type="number" name="number" pattern="[0-9]" min=0 max=10 placeholder="Number"></label>
+
+    <label>Which option best describes your current role?</label>
+    <select id="dropdown" class="dropdown">
+      <option id="select-role" disabled selected value>Select current role</option>
+      <option id="student" value="1">Student</option>
+      <option id="full-time-job" value="2">Full Time Job</option>
+      <option id="other" value="3">Other</option>
+    </select>
+    </label>
+
+      <label for="cool-site-label">How cool is this site?
+    <label for="radio-option-1" class="radio-option-label"><input type="radio" name="cool-input" class="cool" value="0"> So cool</label>
+    <label for="radio-option-2" class="radio-option-label"><input type="radio" name="cool-input" class="cool" value="1"> Very cool</label>
+    </fieldset>
+    <fieldset>
+      <label>What would you like to see improved?</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="0" class="checkbox-class"> Front end</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="1" class="checkbox-class"> Back end</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="2" class="checkbox-class"> User interface</label>
+      <label for="checkbox-label" class="checkbox-label"><input type="checkbox" value="3" class="checkbox-class"> Performance</label>
+  </fieldset>
+  <fieldset>
+    <label for="comments-label">Any comments or suggestions <textarea id="comments" name="comments-box" rows="3" cols="30" placeholder="Enter your comments here..."></textarea></label>
+  </fieldset>
+  <fieldset>
+    <input type="submit" value="Submit" id="submit"/>
+  </fieldset>
+    </form>
+  </body>
+</html>
