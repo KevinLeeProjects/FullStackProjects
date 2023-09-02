@@ -1,0 +1,61 @@
+#text {
+    max-width: 400px;
+    word-wrap: break-word;
+    margin-left: 50px;
+    font-size: 25px;
+  }
+  
+  #author {
+    max-width: 400px;
+    font-size: 17px;
+    margin-left: 300px;
+  }
+  
+  #new-quote {
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 375px;
+    padding: 10px;
+  }
+  
+  .box {
+    position: fixed;
+    display: block;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    top: calc(50% - 250px / 2);
+    left: calc(50% - 250px);
+  }
+  
+  #quote-box {
+    width: 50%;
+    margin: auto;
+  }
+  
+  #buttons {
+    margin-top: -40px;
+    margin-left: 40px;
+  }
+  
+  .fab {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    right: 300px;
+    color: white;
+  }
+  
+  #tumblr-button {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
