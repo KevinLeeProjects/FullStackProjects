@@ -1,1 +1,0 @@
-Timestamp Microservice project built with Node.js. Handles GET requests given dates (valid and invalid) and returns a JSON object that shows the date in unix and utc.
