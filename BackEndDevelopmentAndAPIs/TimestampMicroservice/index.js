@@ -36,6 +36,7 @@ app.get("/api/:date?", function(req, res) {
   
   if(!req.params.date)
   {
+    //If req.params.date is empty, we use today's date and time
     let date = new Date(Date.now());
     let timeInUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()));
     res.json({unix : Date.now(), utc : timeInUTC.toUTCString()});
@@ -44,15 +45,18 @@ app.get("/api/:date?", function(req, res) {
   {
     if(date != "Invalid Date")
     {
+      //If the date works with new Date(), we convert it to unix and UTC with some built in functions
       let timeInUnix = Math.floor(date.getTime());
       let timeInUTC = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds(), date.getMilliseconds()));
       res.json ({unix : timeInUnix, utc : timeInUTC.toUTCString()});
     }
     else
     {
+      //Given a date in unix format, new Date() doesn't consider it a date so we have to convert it ourselves.
       const unix = parseInt(req.params.date, 10);
       if(unix)
       {
+        //We convert it the same way to utc as we did above
         let unixToDate = new Date(unix);
         res.json({unix : unix, utc : unixToDate.toUTCString()});
       }
