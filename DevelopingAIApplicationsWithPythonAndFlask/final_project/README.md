@@ -1,4 +1,4 @@
-#Final project for IBM Developing AI Applications With Python and Flask
+# Final project for IBM Developing AI Applications With Python and Flask
 
 Used Python and Flask to create a web app and deploy it. I used the embeddable Watson AI libraries to create an emotion detection application.
 
